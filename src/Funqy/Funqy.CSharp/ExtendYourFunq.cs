@@ -234,5 +234,26 @@ namespace Funqy.CSharp
         }
 
         #endregion
+
+        #region Finally Async
+
+        public static async Task<Funq<TResult>> FinallyAsync<TResult>(this Funq<TResult> @this, Func<Funq<TResult>, Task<Funq<TResult>>> callback)
+        {
+            var result = @this.IsSuccessful
+                             ? await callback(FunqFactory.Ok(@this, @this.Message)).ConfigureAwait(false)
+                             : await callback(FunqFactory.Fail(@this.Message, @this)).ConfigureAwait(false);
+            return result;
+        }
+
+
+        public static async Task<Funq> FinallyAsync(this Funq @this, Func<Funq, Task<Funq>> callback)
+        {
+            var result = @this.IsSuccessful
+                             ? await callback(FunqFactory.Ok(@this))
+                             : await callback(FunqFactory.Fail(@this.Message, @this));
+            return result;
+        }
+
+        #endregion
     }
 }
