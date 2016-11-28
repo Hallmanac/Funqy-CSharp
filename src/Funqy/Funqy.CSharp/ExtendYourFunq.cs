@@ -39,6 +39,7 @@ namespace Funqy.CSharp
 
         #endregion
 
+
         #region Then
 
         public static Funq<TResult> Then<TResult>(this Funq @this, Func<Funq<TResult>> callback)
@@ -74,8 +75,7 @@ namespace Funqy.CSharp
             return @this.IsFailure ? FunqFactory.Fail(@this.Message) : callback(@this.Result);
         }
         #endregion
-
-
+        
         #region Then Async
 
         public static async Task<Funq<TResult>> ThenAsync<TResult>(this Funq @this, Func<Task<Funq<TResult>>> callback)
@@ -123,6 +123,7 @@ namespace Funqy.CSharp
 
         #endregion
 
+
         #region Catch 
 
         public static Funq<TResult> Catch<TResult>(this Funq<TResult> @this, Func<Funq<TResult>> callback)
@@ -136,13 +137,13 @@ namespace Funqy.CSharp
         }
 
 
-        public static Funq<TResult> Catch<TResult>(this Funq<TResult> @this, Func<TResult, Funq<TResult>> callback)
+        public static Funq<TResult> Catch<TResult>(this Funq<TResult> @this, Func<Funq<TResult>, Funq<TResult>> callback)
         {
             if (@this.IsSuccessful)
             {
                 return FunqFactory.Ok(@this.Result, @this.Message);
             }
-            var errorFunq = callback(@this.Result);
+            var errorFunq = callback(@this);
             return errorFunq;
         }
 
@@ -183,13 +184,13 @@ namespace Funqy.CSharp
         }
 
 
-        public static async Task<Funq<TResult>> CatchAsync<TResult>(this Funq<TResult> @this, Func<TResult, Task<Funq<TResult>>> callback)
+        public static async Task<Funq<TResult>> CatchAsync<TResult>(this Funq<TResult> @this, Func<Funq<TResult>, Task<Funq<TResult>>> callback)
         {
             if (@this.IsSuccessful)
             {
                 return await Task.FromResult(FunqFactory.Ok(@this.Result, @this.Message)).ConfigureAwait(false);
             }
-            var errorFunq = await callback(@this.Result).ConfigureAwait(false);
+            var errorFunq = await callback(@this).ConfigureAwait(false);
             return errorFunq;
         }
 
