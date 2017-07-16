@@ -14,6 +14,7 @@ namespace Funqy.CSharp
             Value = value;
         }
 
+        public bool HasValue => Value != null;
 
         public T Value { get; }
     }
