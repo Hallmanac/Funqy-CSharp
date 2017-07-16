@@ -65,9 +65,9 @@ namespace Funqy.CSharp
         {
             if (@this.IsFailure)
             {
-                return FunqFactory.Fail(@this.Message, @this.Result);
+                return FunqFactory.Fail(@this.Message, @this.Value);
             }
-            var result = callback(@this.Result);
+            var result = callback(@this.Value);
             return result;
         }
 
@@ -80,7 +80,7 @@ namespace Funqy.CSharp
 
         public static FunqResult Then<TResult>(this FunqResult<TResult> @this, Func<TResult, FunqResult> callback)
         {
-            return @this.IsFailure ? FunqFactory.Fail(@this.Message) : callback(@this.Result);
+            return @this.IsFailure ? FunqFactory.Fail(@this.Message) : callback(@this.Value);
         }
         #endregion
         
@@ -115,7 +115,7 @@ namespace Funqy.CSharp
             {
                 return await Task.FromResult(FunqFactory.Fail(@this.Message, default(TResult)));
             }
-            var funq = await callback(@this.Result).ConfigureAwait(false);
+            var funq = await callback(@this.Value).ConfigureAwait(false);
             return funq;
         }
 
@@ -127,7 +127,7 @@ namespace Funqy.CSharp
             {
                 return await Task.FromResult(FunqFactory.Fail(@this.Message, default(TResult)));
             }
-            var funq = await callback(@this.Result).ConfigureAwait(false);
+            var funq = await callback(@this.Value).ConfigureAwait(false);
             return funq;
         }
 
@@ -161,7 +161,7 @@ namespace Funqy.CSharp
             {
                 return await Task.FromResult(FunqFactory.Fail(@this.Message)).ConfigureAwait(false);
             }
-            var funq = await callback(@this.Result).ConfigureAwait(false);
+            var funq = await callback(@this.Value).ConfigureAwait(false);
             return funq;
         }
 
@@ -173,7 +173,7 @@ namespace Funqy.CSharp
             {
                 return await Task.FromResult(FunqFactory.Fail(@this.Message)).ConfigureAwait(false);
             }
-            var funq = await callback(@this.Result).ConfigureAwait(false);
+            var funq = await callback(@this.Value).ConfigureAwait(false);
             return funq;
         }
 
@@ -186,7 +186,7 @@ namespace Funqy.CSharp
         {
             if (@this.IsSuccessful)
             {
-                return FunqFactory.Ok(@this.Result, @this.Message);
+                return FunqFactory.Ok(@this.Value, @this.Message);
             }
             var errorFunq = callback();
             return errorFunq;
@@ -197,7 +197,7 @@ namespace Funqy.CSharp
             var thisResult = @this.Result;
             if (thisResult.IsSuccessful)
             {
-                return FunqFactory.Ok(thisResult.Result, thisResult.Message);
+                return FunqFactory.Ok(thisResult.Value, thisResult.Message);
             }
             var errorFunq = callback();
             return errorFunq;
@@ -207,7 +207,7 @@ namespace Funqy.CSharp
         {
             if (@this.IsSuccessful)
             {
-                return FunqFactory.Ok(@this.Result, @this.Message);
+                return FunqFactory.Ok(@this.Value, @this.Message);
             }
             var errorFunq = callback(@this);
             return errorFunq;
@@ -219,7 +219,7 @@ namespace Funqy.CSharp
             var thisResult = @this.Result;
             if (thisResult.IsSuccessful)
             {
-                return FunqFactory.Ok(thisResult.Result, thisResult.Message);
+                return FunqFactory.Ok(thisResult.Value, thisResult.Message);
             }
             var errorFunq = callback(thisResult);
             return errorFunq;
@@ -255,7 +255,7 @@ namespace Funqy.CSharp
         {
             if (@this.IsSuccessful)
             {
-                return await Task.FromResult(FunqFactory.Ok(@this.Result, @this.Message)).ConfigureAwait(false);
+                return await Task.FromResult(FunqFactory.Ok(@this.Value, @this.Message)).ConfigureAwait(false);
             }
             var errorFunq = await callback().ConfigureAwait(false);
             return errorFunq;
@@ -267,7 +267,7 @@ namespace Funqy.CSharp
             var @this = await thisTask;
             if (@this.IsSuccessful)
             {
-                return await Task.FromResult(FunqFactory.Ok(@this.Result, @this.Message)).ConfigureAwait(false);
+                return await Task.FromResult(FunqFactory.Ok(@this.Value, @this.Message)).ConfigureAwait(false);
             }
             var errorFunq = await callback().ConfigureAwait(false);
             return errorFunq;
@@ -278,7 +278,7 @@ namespace Funqy.CSharp
         {
             if (@this.IsSuccessful)
             {
-                return await Task.FromResult(FunqFactory.Ok(@this.Result, @this.Message)).ConfigureAwait(false);
+                return await Task.FromResult(FunqFactory.Ok(@this.Value, @this.Message)).ConfigureAwait(false);
             }
             var errorFunq = await callback(@this).ConfigureAwait(false);
             return errorFunq;
@@ -290,7 +290,7 @@ namespace Funqy.CSharp
             var @this = await thisTask;
             if (@this.IsSuccessful)
             {
-                return await Task.FromResult(FunqFactory.Ok(@this.Result, @this.Message)).ConfigureAwait(false);
+                return await Task.FromResult(FunqFactory.Ok(@this.Value, @this.Message)).ConfigureAwait(false);
             }
             var errorFunq = await callback(@this).ConfigureAwait(false);
             return errorFunq;

@@ -9,14 +9,14 @@ namespace Funqy.CSharp
     /// <typeparam name="T"></typeparam>
     public class FunqResult<T> : FunqResult
     {
-        public FunqResult(T result, bool isSuccessful, string message = null)
+        public FunqResult(T value, bool isSuccessful, string message = null)
             : base(isSuccessful, message)
         {
-            Result = result;
+            Value = value;
         }
 
 
-        public T Result { get; }
+        public T Value { get; }
     }
 
 
@@ -29,7 +29,7 @@ namespace Funqy.CSharp
         {
             if (!isSuccessful && string.IsNullOrWhiteSpace(message))
             {
-                throw new InvalidOperationException("No error message provided for a non-successful result");
+                throw new InvalidOperationException("No error message provided for a non-successful value");
             }
             IsSuccessful = isSuccessful;
             Message = message;
