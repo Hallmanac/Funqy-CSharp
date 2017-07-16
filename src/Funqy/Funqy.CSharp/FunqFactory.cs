@@ -2,39 +2,39 @@
 {
     public class FunqFactory
     {
-        public static Funq Ok(string message = null)
+        public static FunqResult Ok(string message = null)
         {
-            return new Funq(true, message);
+            return new FunqResult(true, message);
         }
 
 
-        public static Funq<T> Ok<T>(T result, string message = null)
+        public static FunqResult<T> Ok<T>(T result, string message = null)
         {
-            return new Funq<T>(result, true, message);
+            return new FunqResult<T>(result, true, message);
         }
 
 
-        public static Funq<T> Ok<T>(Funq<T> funqResult, string message = null)
+        public static FunqResult<T> Ok<T>(FunqResult<T> funqResultResult, string message = null)
         {
-            return new Funq<T>(funqResult.Result, true, message);
+            return new FunqResult<T>(funqResultResult.Result, true, message);
         }
 
 
-        public static Funq Fail(string message)
+        public static FunqResult Fail(string message)
         {
-            return new Funq(false, message);
+            return new FunqResult(false, message);
         }
 
 
-        public static Funq<T> Fail<T>(string message, T result = default(T))
+        public static FunqResult<T> Fail<T>(string message, T result = default(T))
         {
-            return new Funq<T>(result, false, message);
+            return new FunqResult<T>(result, false, message);
         }
 
 
-        public static Funq<T> Fail<T>(string message, Funq<T> funqResult = null)
+        public static FunqResult<T> Fail<T>(string message, FunqResult<T> funqResultResult = null)
         {
-            return funqResult == null ? new Funq<T>(default(T), false, message) : new Funq<T>(funqResult.Result, false, message);
+            return funqResultResult == null ? new FunqResult<T>(default(T), false, message) : new FunqResult<T>(funqResultResult.Result, false, message);
         }
     }
 }

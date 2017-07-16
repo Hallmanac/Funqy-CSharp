@@ -7,9 +7,9 @@ namespace Funqy.CSharp
     /// Class to help write C# in a more functional style. Coupled with extension methods from ExtendYourFunq.cs.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Funq<T> : Funq
+    public class FunqResult<T> : FunqResult
     {
-        public Funq(T result, bool isSuccessful, string message = null)
+        public FunqResult(T result, bool isSuccessful, string message = null)
             : base(isSuccessful, message)
         {
             Result = result;
@@ -23,9 +23,9 @@ namespace Funqy.CSharp
     /// <summary>
     /// Class to help write C# in a more functional style. Coupled with extension methods from ExtendYourFunq.cs.
     /// </summary>
-    public class Funq
+    public class FunqResult
     {
-        public Funq(bool isSuccessful, string message)
+        public FunqResult(bool isSuccessful, string message)
         {
             if (!isSuccessful && string.IsNullOrWhiteSpace(message))
             {

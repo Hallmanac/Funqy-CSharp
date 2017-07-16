@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtendYourFunq.cs" />
-    <Compile Include="Funq.cs" />
+    <Compile Include="FunqResult.cs" />
     <Compile Include="FunqFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
