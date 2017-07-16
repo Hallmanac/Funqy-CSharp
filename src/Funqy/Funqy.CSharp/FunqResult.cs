@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Funqy.CSharp
+namespace Funqy.CSharp_Legacy
 {
     /// <summary>
     /// Class to help write C# in a more functional style. Coupled with extension methods from ExtendYourFunq.cs.

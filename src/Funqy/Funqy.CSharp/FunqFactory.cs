@@ -1,4 +1,4 @@
-﻿namespace Funqy.CSharp
+﻿namespace Funqy.CSharp_Legacy
 {
     /// <summary>
     /// A factory class to help generate new FunqResult objects

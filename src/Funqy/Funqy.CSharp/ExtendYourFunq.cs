@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 
-namespace Funqy.CSharp
+namespace Funqy.CSharp_Legacy
 {
     public static class ExtendYourFunq
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{6A6E9FF3-E682-4B21-B072-D6B4D2EA8120}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Funqy.CSharp</RootNamespace>
-    <AssemblyName>Funqy.CSharp</AssemblyName>
+    <RootNamespace>Funqy.CSharp_Legacy</RootNamespace>
+    <AssemblyName>Funqy.CSharp_Legacy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

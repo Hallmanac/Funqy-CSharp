@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funqy.CSharp", "Funqy.CSharp\Funqy.CSharp.csproj", "{6A6E9FF3-E682-4B21-B072-D6B4D2EA8120}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funqy.CSharp_Legacy", "Funqy.CSharp\Funqy.CSharp_Legacy.csproj", "{6A6E9FF3-E682-4B21-B072-D6B4D2EA8120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
