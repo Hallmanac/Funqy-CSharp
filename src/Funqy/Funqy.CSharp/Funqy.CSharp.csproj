@@ -17,6 +17,9 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <PackageReleaseNotes>Initial Release of library after 8 months of internal use on several projects.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/Hallmanac/Funqy-CSharp/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/Hallmanac/Funqy-CSharp</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
