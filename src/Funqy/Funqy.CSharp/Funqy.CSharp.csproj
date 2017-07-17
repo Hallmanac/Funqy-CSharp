@@ -5,6 +5,7 @@
     <AssemblyName>Funqy.CSharp</AssemblyName>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>Hallmanac.Funqy.CSharp</PackageId>
+    <Title>Hallmanac.Funqy.CSharp</Title>
     <Authors>Brian Hall</Authors>
     <Company />
     <Product>Hallmanac - Funqy C#</Product>
@@ -13,6 +14,7 @@
     <Description>A small library to allow writing C# in a more functional style. Visit https://github.com/Hallmanac/Funqy-CSharp for more detailed information.
 
 1.0.0 -- Initial release of library after 8 months of internal use on several projects.</Description>
+    <Summary>A small library to allow writing C# in a more functional style.</Summary>
     <PackageTags>C# Functional-Programming CSharp Functional-CSharp Hallmanac Funqy</PackageTags>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <PackageReleaseNotes>Initial Release of library after 8 months of internal use on several projects.</PackageReleaseNotes>
