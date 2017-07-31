@@ -13,6 +13,8 @@
     <PackageProjectUrl>https://github.com/Hallmanac/Funqy-CSharp</PackageProjectUrl>
     <Description>A small library to allow writing C# in a more functional style. This is for the .NET Standard compatibility. There is another NuGet version of this library for the full .NET Framework 4.5. Visit https://github.com/Hallmanac/Funqy-CSharp for more detailed information.
 
+
+
 1.0.0 -- Initial release of library after 8 months of internal use on several projects.
 
 1.0.1 -- Added missing XML documentation comments and added additional check for string null or empty on the HasValue property inside FunqResult</Description>
