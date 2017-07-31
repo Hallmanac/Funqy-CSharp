@@ -2,6 +2,11 @@
 ```
 	Install-Package Hallmanac.Funqy.CSharp
 ```
+_*OR*_
+```
+    Install-Package Hallmanac.Funqy.CSharp_Net45
+```
+As you can see there are two instances of this library so that there is support for both full .NET framework and the new .NET Standard. There are no differences between them and they will be developed in parallel of each other.
 
 ## Description
 A small library to allow writing C# in a more fluent functional style. This library took some inspiration from how Promises work in JavaScript by wrapping code in a transport object and returning that object wrapper from each method in order to facilitate fluent API method chaining.
