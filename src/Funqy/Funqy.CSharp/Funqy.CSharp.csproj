@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
     <AssemblyName>Funqy.CSharp</AssemblyName>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>Hallmanac.Funqy.CSharp</PackageId>
     <Title>Hallmanac.Funqy.CSharp</Title>
     <Authors>Brian Hall</Authors>
@@ -17,20 +17,27 @@
 
 1.0.0 -- Initial release of library after 8 months of internal use on several projects.
 
-1.0.1 -- Added missing XML documentation comments and added additional check for string null or empty on the HasValue property inside FunqResult</Description>
+1.0.1 -- Added missing XML documentation comments and added additional check for string null or empty on the HasValue property inside FunqResult
+
+1.1.0 -- Added support for .NET 4.5 within the same NuGet Package</Description>
     <Summary>A small library to allow writing C# in a more functional style.</Summary>
     <PackageTags>C# Functional-Programming CSharp Functional-CSharp Hallmanac Funqy</PackageTags>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <PackageReleaseNotes>1.0.1 -- Added missing XML documentation comments and added additional check for string null or empty on the HasValue property inside FunqResult</PackageReleaseNotes>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <PackageReleaseNotes>1.1.0 -- Added support for .NET 4.5 in the same NuGet package.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/Hallmanac/Funqy-CSharp/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/Hallmanac/Funqy-CSharp</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard1.4\Funqy.CSharp.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.4\Funqy.CSharp.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
