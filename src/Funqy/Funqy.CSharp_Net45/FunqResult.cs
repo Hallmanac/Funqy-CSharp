@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Funqy.CSharp_Net45
+namespace Funqy.CSharp
 {
     /// <summary>
     /// Class to hold the result of a function that wraps an operation which will return a value.

@@ -1,4 +1,4 @@
-﻿namespace Funqy.CSharp_Net45
+﻿namespace Funqy.CSharp
 {
     /// <summary>
     /// A factory class to help generate new FunqResult objects

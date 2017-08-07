@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 
-namespace Funqy.CSharp_Net45
+namespace Funqy.CSharp
 {
     /// <summary>
     /// Extensions methods that enable chaining the <see cref="FunqResult{T}"/>
